@@ -7,30 +7,34 @@
 - Создание новой задачи (`POST /tasks`)
 - Удаление задачи (`DELETE /tasks/{id}`)
 
-## Как запустить
+# Как запустить
 
 ```bash
 go run main.go
+
 Сервер запускается на http://localhost:8080
-Примеры запросов
+
+# Примеры запросов
+
 1. Получить все задачи
-Bashcurl http://localhost:8080/tasks
+```bash
+curl http://localhost:8080/tasks
+
 2. Создать новую задачу
-Bashcurl -X POST http://localhost:8080/tasks \
+```bash
+curl -X POST http://localhost:8080/tasks \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Купить продукты",
     "content": "Молоко, хлеб, яйца и сыр"
   }'
+
 3. Удалить задачу (например, с id = 1)
-Bashcurl -X DELETE http://localhost:8080/tasks/1
-Стек технологий
+```bash
+curl -X DELETE http://localhost:8080/tasks/1
 
-Go + net/http
-SQLite (modernc.org/sqlite)
-JSON
 
-Структура проекта
+#Структура проекта
 
 main.go — главный файл
 internal/handler/ — обработчики запросов
