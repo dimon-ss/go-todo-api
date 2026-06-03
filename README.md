@@ -11,7 +11,7 @@
 
 ```bash
 go run main.go
-
+```
 Сервер запускается на http://localhost:8080
 
 # Примеры запросов
@@ -19,7 +19,7 @@ go run main.go
 1. Получить все задачи
 ```bash
 curl http://localhost:8080/tasks
-
+```
 2. Создать новую задачу
 ```bash
 curl -X POST http://localhost:8080/tasks \
@@ -28,11 +28,11 @@ curl -X POST http://localhost:8080/tasks \
     "title": "Купить продукты",
     "content": "Молоко, хлеб, яйца и сыр"
   }'
-
+```
 3. Удалить задачу (например, с id = 1)
 ```bash
 curl -X DELETE http://localhost:8080/tasks/1
-
+```
 
 #Структура проекта
 
