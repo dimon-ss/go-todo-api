@@ -7,20 +7,24 @@
 - Создание новой задачи (`POST /tasks`)
 - Удаление задачи (`DELETE /tasks/{id}`)
 
-# Как запустить
+#№Как запустить
 
 ```bash
 go run main.go
 ```
+
 Сервер запускается на http://localhost:8080
 
-# Примеры запросов
+#№Примеры запросов
 
 1. Получить все задачи
+
 ```bash
 curl http://localhost:8080/tasks
 ```
+
 2. Создать новую задачу
+
 ```bash
 curl -X POST http://localhost:8080/tasks \
   -H "Content-Type: application/json" \
@@ -29,14 +33,16 @@ curl -X POST http://localhost:8080/tasks \
     "content": "Молоко, хлеб, яйца и сыр"
   }'
 ```
+
 3. Удалить задачу (например, с id = 1)
+
 ```bash
 curl -X DELETE http://localhost:8080/tasks/1
 ```
 
-#Структура проекта
+#№Структура проекта
 
-main.go — главный файл
-internal/handler/ — обработчики запросов
-internal/repository/ — работа с базой данных
-internal/model/ — модели данных
+- 'main.go' — главный файл
+- 'internal/handler/' — обработчики запросов
+- 'internal/repository/' — работа с базой данных
+- 'internal/model/' — модели данных
